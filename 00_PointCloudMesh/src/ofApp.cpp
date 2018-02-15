@@ -44,12 +44,12 @@ void ofApp::update()
         ////////////////////////////////////////////////////////////////////////
         /// YOUR WORK HERE ! ///////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
-        // Create the ofMesh.
-        //     - clear the ofMesh
-        // for each depth pixel ...
-        //     - add a vertex at its x, y, z (depth).
-        //     - add a texture coordinate for the corresponding location in the
-        //       image.
+        // - Create the ofMesh.
+        //     - Clear the ofMesh.
+        // - ... for each depth pixel ...
+        //     - Add a vertex at its x, y, z (depth).
+        //     - Add a texture coordinate for the corresponding location in the
+        //       Kinect's color image.
         ////////////////////////////////////////////////////////////////////////
 
         
@@ -59,10 +59,10 @@ void ofApp::update()
             /// YOUR WORK HERE ! ///////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////
             //
-            //     - set the mesh's primitive type to OF_PRIMITIVE_TRIANGLES.
-            //     - create plane (this is essentially the 03_MeshPlane example)
-            //       by adding indices that will result in two triangles per
-            //       point.
+            //     - Set the mesh's primitive type to OF_PRIMITIVE_TRIANGLES.
+            //     - Create a plane by adding indices that will result in two 
+            //       triangles per point. This is essentially the 03_MeshPlane 
+            //       example.
             //
             ////////////////////////////////////////////////////////////////////////
         }
@@ -72,12 +72,11 @@ void ofApp::update()
             /// YOUR WORK HERE ! ///////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////
             //
-            //     - set the mesh's primitive type to OF_PRIMITIVE_TRIANGLE_STRIP.
-            //     - create plane by adding indices that will result in a surface
+            //     - Set the mesh's primitive type to OF_PRIMITIVE_TRIANGLE_STRIP.
+            //     - Create a plane by adding indices that will result in a surface
             //       created as a triangle strip.
-            //     - this should look very similar (if not exactly the same as
-            //       MESH_MODE_0. the goal is to think in another primitive
-            //       mode.
+            //     - This should look like MESH_MODE_0.  The goal is to think in
+            //       terms of another primitive type.
             //
             ////////////////////////////////////////////////////////////////////////
         }
@@ -87,11 +86,8 @@ void ofApp::update()
             /// YOUR WORK HERE ! ///////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////
             //
-            //     - set the mesh's primitive type to OF_PRIMITIVE_TRIANGLES.
-            //     - create plane (this is essentially the 03_MeshPlane example)
-            //       by adding indices that will result in two triangles per
-            //       point.
-            //     - The DIFFERENCE BETWEEN THIS AN MESH_MODE_0
+            //     - Set the mesh's primitive type to OF_PRIMITIVE_TRIANGLES.
+            //     - Create a like in MESH_MODE_0 above, but ...
             //     - DO NOT generate the triangle if ANY of the three indices of
             //       a given triangle include a depth value that is not between
             //       minDepthThreshold and maxDepthThresholdcooresponds or a
