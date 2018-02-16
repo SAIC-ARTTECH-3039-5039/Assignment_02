@@ -38,21 +38,28 @@ void ofApp::update()
     
     if (kinect.isFrameNew())
     {
-        ofFloatPixels rawDepthPixels = kinect.getRawDepthPixels();
-        ofPixels rgbPixels = kinect.getRgbPixels();
-        
+        // Get a copy of the RGB pixels that are registered to the depth image.
+        // This means that they have the same width / height.
+        ofPixels rgbPixels = kinect.getRegisteredPixels();
+
         ////////////////////////////////////////////////////////////////////////
         /// YOUR WORK HERE ! ///////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
-        // - Create the ofMesh.
-        //     - Clear the ofMesh.
-        // - ... for each depth pixel ...
-        //     - Add a vertex at its x, y, z (depth).
-        //     - Add a texture coordinate for the corresponding location in the
-        //       Kinect's color image.
+        // Create the ofMesh.
+        //     - clear the ofMesh
+        // for each depth pixel ...
+        //     - add a vertex at its x, y, z (depth).
+        //     - add a texture coordinate for the corresponding location in the
+        //       image.
+        //
+        //  e.g.
+        //  for all x ...
+        //     for all y ...
+        //         mesh.addVertex(kinect.getWorldCoordinateAt(x, y));
+        //         mesh.addTexCoord(glm::vec2(x, y));
+        //
         ////////////////////////////////////////////////////////////////////////
 
-        
         if (currentMeshMode == MESH_MODE_0)
         {
             ////////////////////////////////////////////////////////////////////////
